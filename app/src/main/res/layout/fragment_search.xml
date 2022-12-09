@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?backgroundColor"
+    android:transitionName="@string/search_transition_name"
+    tools:context=".ui.search.SearchFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/toolbar_element_size"
+                android:layout_height="@dimen/toolbar_element_size"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:padding="@dimen/toolbar_main_element_padding"
+                android:background="@drawable/toolbar_icons_ripple"
+                app:srcCompat="@drawable/ic_arrow_back"
+                app:tint="?colorOnPrimary" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/toolbar_element_size"
+                android:layout_height="@dimen/toolbar_element_size"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:padding="@dimen/toolbar_element_padding"
+                app:srcCompat="@drawable/ic_search"
+                app:tint="?colorOnPrimary" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_field"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/toolbar_element_size"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:singleLine="true"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionSearch"
+                android:textColor="?colorOnPrimary"
+                android:textColorHint="@color/light_gray_color"
+                android:textSize="@dimen/toolbar_normal_text_size"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/clear_button"
+                android:layout_width="@dimen/toolbar_element_size"
+                android:layout_height="@dimen/toolbar_element_size"
+                android:padding="@dimen/toolbar_element_padding"
+                android:visibility="gone"
+                android:background="@drawable/toolbar_icons_ripple"
+                app:srcCompat="@drawable/ic_clear"
+                app:tint="?colorOnPrimary"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/filters_button"
+                android:layout_width="@dimen/toolbar_element_size"
+                android:layout_height="@dimen/toolbar_element_size"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:layout_marginEnd="@dimen/small_spacing"
+                android:padding="@dimen/toolbar_element_padding"
+                app:srcCompat="@drawable/ic_parameters"
+                android:background="@drawable/toolbar_icons_ripple"
+                app:tint="?colorOnPrimary" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/articles_views"
+        layout="@layout/articles_view_content" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

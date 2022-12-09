@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">Art And Design</string>
+    <string name="app_title">Art &amp; Design</string>
+
+    <string name="server_error_description">Cannot connect to server</string>
+    <string name="no_internet_description">No internet connection</string>
+    <string name="enter_query_description">Enter a search query</string>
+    <string name="no_results_description">No results found</string>
+
+    <string name="no_connection_message">No connection</string>
+    <string name="connected_message">Back Connected</string>
+
+    <string name="parameters_label">Parameters</string>
+    <string name="time_range_label">Time range</string>
+    <string name="relevance_label">Relevance</string>
+    <string name="order_by_label">Order by</string>
+    <string name="filter_label">Filter</string>
+    <string name="newest_label">Newest</string>
+    <string name="oldest_label">Oldest</string>
+    <string name="search_label">Search</string>
+    <string name="cancel_label">Cancel</string>
+
+    <string name="select_date_range_text">Select date range</string>
+    <string name="apply_filters_title">Apply filters:</string>
+    <string name="pick_date_title">Pick Date</string>
+
+    <string name="search_hint">Search</string>
+
+    <string name="search_transition_name">container</string>
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?backgroundColor"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_title"
+                android:textColor="?colorOnPrimary"
+                android:textSize="@dimen/toolbar_title_size"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                app:fontFamily="@font/almendra_sc" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/day_night_button"
+                android:layout_gravity="center_vertical|end"
+                android:layout_width="@dimen/toolbar_element_size"
+                android:layout_height="@dimen/toolbar_element_size"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:layout_marginEnd="@dimen/small_spacing"
+                android:padding="@dimen/toolbar_element_padding"
+                app:srcCompat="@drawable/ic_night_mode"
+                android:background="@drawable/toolbar_icons_ripple"
+                app:tint="?colorOnPrimary" />
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/articles_views"
+        layout="@layout/articles_view_content" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/medium_spacing"
+        android:transitionName="@string/search_transition_name"
+        app:srcCompat="@drawable/ic_search" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
